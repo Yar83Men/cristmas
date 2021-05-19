@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Санта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <img src="img/bg.jpg" id="bg">
+        <img src="img/moon.png" id="moon">
+        <img src="img/cloud1.png" id="cloud1">
+        <img src="img/cloud2.png" id="cloud2">
+        <img src="img/santa.png" id="santa">
+        <div class="tree"></div>
+        <div class="text">С Новым 2021 Годом</div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script>
+        let moon = document.querySelector("#moon");
+        let cloud1 = document.querySelector("#cloud1");
+        let cloud2 = document.querySelector("#cloud2");
+        let santa = document.querySelector("#santa");
+        let bg = document.querySelector("#bg");
+        let tree = document.querySelector(".tree");
+        let text = document.querySelector(".text");
+
+        gsap.to(moon, {
+            scrollTrigger:{scrub:1},
+            scale:1.5,
+        });
+
+        gsap.to(bg, {
+            scrollTrigger:{scrub:1},
+            scale:1.1,
+        });
+
+        gsap.to(santa, {
+            scrollTrigger:{scrub:1},
+            scale:1.5,
+            y:-500,
+            x:2200
+        });
+
+        gsap.to(tree, {
+            scrollTrigger:{scrub:1},
+            x:-500
+        });
+
+        gsap.to(cloud1, {
+            scrollTrigger:{scrub:1},
+            x:-200
+        });
+
+        gsap.to(cloud2, {
+            scrollTrigger:{scrub:1},
+            x:300
+        });
+
+        gsap.to(text, {
+            scrollTrigger:{scrub:1},
+            y:-800
+        });
+
+       
+    </script>
+</body>
+</html>
